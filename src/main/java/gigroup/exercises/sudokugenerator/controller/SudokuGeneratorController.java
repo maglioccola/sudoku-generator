@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import gigroup.exercises.sudokugenerator.SudokuGenerator;
+import gigroup.exercises.sudokugenerator.service.SudokuGeneratorService;
 
 @RestController
 @RequestMapping("/api")
 public class SudokuGeneratorController {
 
 	@Autowired
-	private SudokuGenerator sudokuGenerator;
+	private SudokuGeneratorService sudokuGenerator;
 
 	@GetMapping(path = "/generate")
 	public int[][] getSudokuTable() {
